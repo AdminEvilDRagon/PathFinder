@@ -21,7 +21,7 @@ end
 
 local folder = existingFolder or Instance.new("Folder")
 folder.Name = "PathVisualizer"
-folder.Parent = workspace
+folder.Parent = workspacea
 
 local lastPart = nil
 
@@ -50,16 +50,11 @@ for i, pos in ipairs(waypoints) do
     local label = Instance.new("TextLabel")
     label.Size = UDim2.new(1, 0, 1, 0)
     label.BackgroundTransparency = 1
-    label.RichText = true
-    label.TextStrokeTransparency = 1
+    label.TextColor3 = Color3.fromRGB(255, 255, 255)
+    label.TextStrokeTransparency = 0
     label.TextScaled = true
     label.Font = Enum.Font.SourceSansBold
-    
-    local blackTag = '<font color="rgb(27, 42, 53)">'
-    local whiteTag = '<font color="rgb(193, 202, 222)">'
-    local closeTag = '</font>'
-    
-    label.Text = string.format("%s%d:%s %s%d, %d, %d%s", blackTag, i, closeTag, whiteTag, pos.X, pos.Y, pos.Z, closeTag)
+    label.Text = string.format("%d: %d, %d, %d", i, pos.X, pos.Y, pos.Z)
     label.Parent = bgui
 
     if lastPart then
