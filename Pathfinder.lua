@@ -55,8 +55,8 @@ for i, pos in ipairs(waypoints) do
     label.TextScaled = true
     label.Font = Enum.Font.SourceSansBold
     
-    local blackTag = '<font color="rgb(0,0,0)">'
-    local whiteTag = '<font color="rgb(255,255,255)">'
+    local blackTag = '<font color="rgb(27, 42, 53)">'
+    local whiteTag = '<font color="rgb(193, 202, 222)">'
     local closeTag = '</font>'
     
     label.Text = string.format("%s%d:%s %s%d, %d, %d%s", blackTag, i, closeTag, whiteTag, pos.X, pos.Y, pos.Z, closeTag)
